@@ -21,12 +21,17 @@ net.core.rmem_max = 1024123000
 net.core.netdev_max_backlog = 1000
 net.core.optmem_max = 20480
 net.ipv4.tcp_max_tw_buckets = 262144
-net.ipv4.tcp_keepalive_time = 1200
-net.ipv4.tcp_keepalive_probes = 3
-net.ipv4.tcp_keepalive_intvl = 30
+#net.ipv4.tcp_keepalive_time = 1200
+#net.ipv4.tcp_keepalive_probes = 3
+#net.ipv4.tcp_keepalive_intvl = 30
+
+net.ipv4.tcp_keepalive_time = 900
+net.ipv4.tcp_keepalive_probes = 30
+net.ipv4.tcp_keepalive_intvl = 20
+
 net.ipv4.tcp_retries1 = 5
 net.ipv4.tcp_retries2 = 5
-net.ipv4.tcp_fin_timeout = 30
+net.ipv4.tcp_fin_timeout = 5
 net.ipv4.tcp_tw_recycle = 1
 net.ipv4.ip_local_port_range = 10000 65000
 net.ipv4.tcp_mem = 2304000 3072000 4608000
@@ -38,6 +43,17 @@ net.ipv4.tcp_syn_retries = 3
 net.ipv4.tcp_synack_retries = 0
 net.ipv4.tcp_syncookies = 1
 net.core.netdev_max_backlog = 165536
+
+net.netfilter.nf_conntrack_max = 2097152
+
+net.netfilter.nf_conntrack_icmp_timeout = 10 
+net.netfilter.nf_conntrack_tcp_timeout_syn_recv = 5 
+net.netfilter.nf_conntrack_tcp_timeout_syn_sent = 5 
+net.netfilter.nf_conntrack_tcp_timeout_established = 600 
+net.netfilter.nf_conntrack_tcp_timeout_fin_wait = 10 
+net.netfilter.nf_conntrack_tcp_timeout_time_wait = 10 
+net.netfilter.nf_conntrack_tcp_timeout_close_wait = 10 
+net.netfilter.nf_conntrack_tcp_timeout_last_ack = 10
 
 EOF
 
